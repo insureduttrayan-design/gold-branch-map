@@ -3,86 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Branch Locator</title>
-
+<title>Branch Map</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-.map-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-}
-
-.map-container img {
-  width: 100%;
-}
-
-/* clickable buttons */
-.branch {
-  position: absolute;
-  background: rgba(255, 215, 0, 0.85);
-  padding: 5px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-/* Example positions (adjust later if needed) */
-#bagnan { bottom: 40px; left: 40px; }
-#andul { bottom: 80px; left: 80px; }
-#uluberia { bottom: 60px; left: 30px; }
-#kestopur { top: 60%; left: 65%; }
-#beleghata { top: 65%; left: 60%; }
-#belghoria { top: 55%; left: 60%; }
-#uttarpara { top: 55%; left: 45%; }
-#chakdah { top: 45%; left: 70%; }
-#krishnanagar { top: 40%; left: 75%; }
-#ranaghat { top: 50%; left: 72%; }
-#haringhata { top: 48%; left: 68%; }
-#halisahar { top: 52%; left: 66%; }
-#bongaon { top: 45%; left: 80%; }
-#nahata { top: 40%; left: 82%; }
-#polerhat { bottom: 20px; left: 70%; }
-#mukundapur { bottom: 10px; left: 75%; }
-
+  body { margin:0; font-family:Arial, sans-serif; text-align:center; }
+  .map-container { position:relative; width:90%; max-width:500px; margin:auto; }
+  .map-container img { width:100%; height:auto; }
+  .branch {
+    position:absolute;
+    background:rgba(255,215,0,0.9);
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:12px;
+    cursor:pointer;
+  }
+  /* Adjust positions */
+  #halisahar{top:45%; left:60%;}
+  #chakdah{top:50%; left:65%;}
+  #uttarpara{top:50%; left:40%;}
+  #kestopur{top:60%; left:55%;}
+  #bongaon{top:45%; left:70%;}
+  #andul{top:70%; left:30%;}
+  #beleghata{top:60%; left:60%;}
+  #belghoria{top:55%; left:58%;}
+  #krishnanagar{top:50%; left:70%;}
+  #uluberia{top:75%; left:25%;}
+  #polerhat{top:80%; left:65%;}
+  #ranaghat{top:52%; left:67%;}
+  #haringhata{top:48%; left:62%;}
+  #mukundapur{top:85%; left:60%;}
+  #nahata{top:45%; left:75%;}
+  #bagnan{top:70%; left:25%;}
 </style>
 </head>
-
 <body>
 
-<h2>📍 Tap Branch to Open Location</h2>
-
+<h2>Tap on Branch</h2>
 <div class="map-container">
-  <img src="your-map.jpg" alt="Map">
+  <img src="your-map.jpg" alt="Branch Map">
 
-  <div class="branch" id="bagnan" onclick="openMap('https://maps.app.goo.gl/sxbgT2XXMwsXuNtP9')">Bagnan</div>
-  <div class="branch" id="andul" onclick="openMap('https://maps.app.goo.gl/VJAn3iFZh6vJzziS6')">Andul</div>
-  <div class="branch" id="uluberia" onclick="openMap('https://maps.app.goo.gl/zkgza6ESKdMYFqNM8')">Uluberia</div>
+  <div class="branch" id="halisahar" onclick="openMap('https://maps.app.goo.gl/zka7WNo2swgmDc6V7')">Halisahar</div>
+  <div class="branch" id="chakdah" onclick="openMap('https://maps.app.goo.gl/NK7K88owSVK1S9Hm7')">Chakdah</div>
+  <div class="branch" id="uttarpara" onclick="openMap('https://maps.app.goo.gl/xZDnybZBRFU6r3YAA')">Uttarpara</div>
   <div class="branch" id="kestopur" onclick="openMap('https://maps.app.goo.gl/vpwGWKxS8ZZGjW3X7')">Kestopur</div>
+  <div class="branch" id="bongaon" onclick="openMap('https://maps.app.goo.gl/G9KKF9jC8N3cWNLz8')">Bongaon</div>
+  <div class="branch" id="andul" onclick="openMap('https://maps.app.goo.gl/VJAn3iFZh6vJzziS6')">Andul</div>
   <div class="branch" id="beleghata" onclick="openMap('https://maps.app.goo.gl/NHzrMXo5ujBezDWD8')">Beleghata</div>
   <div class="branch" id="belghoria" onclick="openMap('https://maps.app.goo.gl/hYFYPxBxJLdGiCMw7')">Belghoria</div>
-  <div class="branch" id="uttarpara" onclick="openMap('https://maps.app.goo.gl/xZDnybZBRFU6r3YAA')">Uttarpara</div>
-  <div class="branch" id="chakdah" onclick="openMap('https://maps.app.goo.gl/NK7K88owSVK1S9Hm7')">Chakdah</div>
   <div class="branch" id="krishnanagar" onclick="openMap('https://maps.app.goo.gl/3XVECuy4b8hKWRqY7')">Krishnanagar</div>
+  <div class="branch" id="uluberia" onclick="openMap('https://maps.app.goo.gl/zkgza6ESKdMYFqNM8')">Uluberia</div>
+  <div class="branch" id="polerhat" onclick="openMap('https://maps.app.goo.gl/mHKZmvaDfT6JiRFr8')">Polerhat</div>
   <div class="branch" id="ranaghat" onclick="openMap('https://maps.app.goo.gl/FzVYEmZB2MF935T26')">Ranaghat</div>
   <div class="branch" id="haringhata" onclick="openMap('https://maps.app.goo.gl/uzXPG6XzjZ9m84td8')">Haringhata</div>
-  <div class="branch" id="halisahar" onclick="openMap('https://maps.app.goo.gl/zka7WNo2swgmDc6V7')">Halisahar</div>
-  <div class="branch" id="bongaon" onclick="openMap('https://maps.app.goo.gl/G9KKF9jC8N3cWNLz8')">Bongaon</div>
-  <div class="branch" id="nahata" onclick="openMap('https://maps.app.goo.gl/ygmCopun3Qcw4rFq9')">Nahata</div>
-  <div class="branch" id="polerhat" onclick="openMap('https://maps.app.goo.gl/mHKZmvaDfT6JiRFr8')">Polerhat</div>
   <div class="branch" id="mukundapur" onclick="openMap('https://maps.app.goo.gl/zWa2YCpuPDRyo8Pb8')">Mukundapur</div>
+  <div class="branch" id="nahata" onclick="openMap('https://maps.app.goo.gl/ygmCopun3Qcw4rFq9')">Nahata</div>
+  <div class="branch" id="bagnan" onclick="openMap('https://maps.app.goo.gl/sxbgT2XXMwsXuNtP9')">Bagnan</div>
 
 </div>
 
 <script>
 function openMap(url) {
-  window.open(url, '_blank');
+  window.open(url,"_blank");
 }
 </script>
 
